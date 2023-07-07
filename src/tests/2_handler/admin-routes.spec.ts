@@ -5,7 +5,7 @@ const request = supertest(app);
 
 describe('Test Admin Endpoint', () => {
   const token =
-    'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkMmIkMTAkL2VlazNtZ0tjUVRjQVZJUVpzU0pmT2liTWh0UGFSaXAyQVQ4VkdaSVZNbGFDSzhLSG41ZUMifSwiaWF0IjoxNjgxMzEzNTg0fQ.-uXhCIKEC1n-85sYqaA3aFJ8bDv8awfbSm0X28noxjo';
+    'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkMmIkMTAkL2VlazNtZ0tjUVRjQVZJUVpzU0pmT2liTWh0UGFSaXAyQVQ4VkdaSVZNbGFDSzhLSG41ZUMifSwiaWF0IjoxNjg4NzUyMjE0fQ.B5W5yrq__AZvCfE5xOAiCCsGaCK2O-fvyPA02ej5VGA';
 
   it('Login success', async () => {
     const response = await request
