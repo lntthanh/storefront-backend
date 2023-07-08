@@ -5,3 +5,5 @@ CREATE TABLE products (
     price Integer NOT NULL,
     category VARCHAR(64)
 );
+
+INSERT INTO public.products (name,price,category) VALUES ('product 1',2000,'hot');

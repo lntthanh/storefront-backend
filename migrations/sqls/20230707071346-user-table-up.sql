@@ -6,3 +6,5 @@ CREATE TABLE users (
     username VARCHAR(32) UNIQUE NOT NULL,
     password VARCHAR NOT NULL
 );
+
+INSERT INTO public.users (first_name,last_name,username,"password") VALUES ('Thanh','Le','thanhlnt','$2b$10$FGx/SDPJo2DXihxxZsabyeU6dWi6plTf7h1LybZUPz17llEkGJTSy');

@@ -9,7 +9,7 @@
     "prod": "npm run build && node dist/index.js",
     "test:prepare": "db-migrate db:drop full_stack_test && db-migrate db:create full_stack_test && db-migrate --env test up",
     "db:migrate": "db-migrate up",
-    "test": "npm run test:prepare && ENV=test jasmine-ts",
+    "test": "npm run build && npm run test:prepare && ENV=test jasmine-ts",
     "test:jasmine": "npm run build && npm run jasmine",
     "jasmine": "jasmine",
     "lint": "eslint './src/**/*.ts'",

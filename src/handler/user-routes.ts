@@ -51,14 +51,15 @@ const create = async (req: Request, res: Response) => {
       );
     }
 
-    let validate = validateUsername(data.username) || validatePwd(data.username);;
+    let validate = validateUsername(data.username);
     if (validate) {
       throw new Error(validate);
     }
-    // validate = validatePwd(data.password);
-    // if (validate) {
-    //   throw new Error(validate);
-    // }
+
+    validate = validatePwd(data.password);
+    if (validate) {
+      throw new Error(validate);
+    }
 
     const newData = await store.create(data);
     newData.password = '******';

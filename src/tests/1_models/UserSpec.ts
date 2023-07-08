@@ -5,7 +5,7 @@ const store = new UserStore();
 describe('User Model', () => {
   beforeAll(async () => {
     await store.create({
-      username: 'thanhlnt',
+      username: 'thanhlnt1',
       password: '123456',
       first_name: 'Thanh',
       last_name: 'Le',
@@ -30,13 +30,13 @@ describe('User Model', () => {
 
   it('Create method should add a user', async () => {
     const result = await store.create({
-      username: 'thanhlnt1',
+      username: 'thanhlnt2',
       password: '123456',
       first_name: 'Thanh',
       last_name: 'Le',
     });
-    expect(result.id).toBeGreaterThanOrEqual(1);
-    expect(result.username).toEqual('thanhlnt1');
+    expect(result.id).toBeGreaterThanOrEqual(3);
+    expect(result.username).toEqual('thanhlnt2');
     expect(result.first_name).toEqual('Thanh');
     expect(result.last_name).toEqual('Le');
   });

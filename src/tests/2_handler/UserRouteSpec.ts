@@ -5,7 +5,7 @@ const request = supertest(app);
 
 describe('Test User Endpoint', () => {
   const token =
-    'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkMmIkMTAkL2VlazNtZ0tjUVRjQVZJUVpzU0pmT2liTWh0UGFSaXAyQVQ4VkdaSVZNbGFDSzhLSG41ZUMifSwiaWF0IjoxNjg4NzUyMjE0fQ.B5W5yrq__AZvCfE5xOAiCCsGaCK2O-fvyPA02ej5VGA';
+    'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwicGFzc3dvcmQiOiIkMmIkMTAkL2VlazNtZ0tjUVRjQVZJUVpzU0pmT2liTWh0UGFSaXAyQVQ4VkdaSVZNbGFDSzhLSG41ZUMifSwiaWF0IjoxNjg4ODMzMjk1fQ.c0iLQF-_2ldL6AWYKSHHSVitACKnl137QCT6IE4vo6o';
 
   it('User list success', async () => {
     const response = await request.get('/users').set('authorization', token);
@@ -33,7 +33,7 @@ describe('Test User Endpoint', () => {
       .set('authorization', token)
       .send({
         username: 'user5',
-        password: '123456',
+        password: '12345678',
         last_name: 'last name',
         first_name: 'first name',
       });
